@@ -139,32 +139,31 @@ img {
     /* Qui imposto un max-width alle section visto che
     non posso sovrascrivere la proprietà width del 
     container */
-    .lessons , .why-us , .steps{
+    /* .lessons , .why-us , .steps{
         max-width: 1140px;
-    }
+    } */
 
     /* Infine sovrascrivo la width del container con il
     100% che fa riferimento alla dimensione del suo
     genitore che è la section */
-    section .container{
+    .container{
         width: 100%;
     }
 
-    .why-us .col-left{
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .why-us .col-left img{
-        
-    }
-
+  
 }
 
 /* RESPONSIVE PER SMARTPHONE 480px*/
 
 @media screen and (max-width: 480px) {
 
+    section .row{
+        flex-direction:column;
+    }
 
+    section .container .row > div{
+        width: 100%;
+        margin-bottom: 50px;
+    }
     
 }
