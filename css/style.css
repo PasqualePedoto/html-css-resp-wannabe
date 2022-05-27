@@ -139,9 +139,9 @@ img {
     /* Qui imposto un max-width alle section visto che
     non posso sovrascrivere la proprietà width del 
     container */
-    /* .lessons , .why-us , .steps{
+    .lessons , .why-us , .steps{
         max-width: 1140px;
-    } */
+    }
 
     /* Infine sovrascrivo la width del container con il
     100% che fa riferimento alla dimensione del suo
@@ -155,15 +155,32 @@ img {
 
 /* RESPONSIVE PER SMARTPHONE 480px*/
 
-@media screen and (max-width: 480px) {
 
+@media screen and (max-width: 480px) {
+    /* Per adattare la pagina web ad una risoluzione di 
+    480px cambio la direction del display flex in modo da 
+    incolonnare tutto */
     section .row{
         flex-direction:column;
     }
 
+    /* Infine con la proprietà width: 100% aumento al
+    massimo i contenuti dei blocchi cosi da ricoprire
+    il 100% del contenitore */
     section .container .row > div{
         width: 100%;
         margin-bottom: 50px;
     }
     
 }
+
+@media screen and (max-width: 1160px) and (min-width: 769px){
+
+    /* Semplicemente viene data una massima dimensione 
+    al container che fa riferimento alla width del body */
+    .container{
+        width: 100%;
+    }
+
+}
+
